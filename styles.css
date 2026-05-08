@@ -260,6 +260,7 @@ img {
 
 .cards {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
 }
 
 .cards .card,
@@ -268,11 +269,39 @@ img {
   padding: 1.3rem;
 }
 
+.cards .card,
+.town-grid .card,
+.faq-grid .card,
+.section-card,
+.sidebar-card,
+.hero-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .cards h3,
 .town-grid h3,
 .faq-grid h3 {
   margin-top: 0;
   color: var(--navy);
+}
+
+.cards p,
+.town-grid p,
+.faq-grid p,
+.section-card p,
+.sidebar-card p,
+.hero-card p {
+  margin-top: 0;
+}
+
+.cards .card p:last-child,
+.town-grid .card p:last-child,
+.faq-grid .card p:last-child,
+.section-card p:last-child,
+.sidebar-card p:last-child,
+.hero-card p:last-child {
+  margin-bottom: 0;
 }
 
 .town-grid {
